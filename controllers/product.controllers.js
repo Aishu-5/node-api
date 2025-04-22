@@ -22,7 +22,7 @@ const getProducts = async(req,res)=>{
         }
 }
 
-//retrieve aa single product
+//retrieve a single product
 const getproduct = async(req,res)=>{
     try{
         const {id} = req.params;

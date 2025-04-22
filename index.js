@@ -2,6 +2,7 @@ const express = require('express');
 const app = express()
 const mongoose = require('mongoose');
 const productRoute = require('./routes/product.route');
+const userRoute = require('./routes/user.route');
 const dotenv = require('dotenv');
 
 dotenv.config();
@@ -10,7 +11,7 @@ dotenv.config();
 app.use(express.json());
 
 //Test api
-app.get('/api', (req, res) => {
+app.get('/testapi', (req, res) => {
   res.send('Hello Worlddddd')
 })
 //port number 3000
@@ -18,6 +19,7 @@ app.listen(3000);
 
 //routes
 app.use('/api/products',productRoute);
+app.use('/api/users',userRoute);
 
 
 //mongodb connection
